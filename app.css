@@ -1,0 +1,12 @@
+body {
+background-color: rgb(240, 240, 240);
+font-family:Charlemagne Std;
+font-size:medium;
+text-align: center;
+}
+.picker1 .picker2 {
+margin-top: 50px;
+margin:bottom: 10px;
+margin-right: 50px;
+margin-left:50px;
+}

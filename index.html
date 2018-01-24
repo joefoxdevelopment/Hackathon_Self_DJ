@@ -1,10 +1,11 @@
 <!-- Ability to upload two sound files -->
 <html>
     <head>
+      <link rel="stylesheet" href="app.css">
     </head>
     <body>
-        <input type="file" class="picker1" onchange="pickAndPlay(1)"><br />
-        <input type="file" class="picker2" onchange="pickAndPlay(2)"><br />
+        <input type="file" id="picker1" class="picker1" onchange="pickAndPlay(1)"><br />
+        <input type="file" id="picker1" class="picker2" onchange="pickAndPlay(2)"><br />
 
         <audio controls id="player1" class="player1" data>
             <source class="source1" src="">

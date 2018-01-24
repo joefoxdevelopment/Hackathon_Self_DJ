@@ -17,6 +17,6 @@ var calcVol = function() {
     var vol1    = document.getElementById("vol1");
     var vol2    = document.getElementById("vol2");
 
-    player1.volume = ((vol1.value/vol1.max) * slider.value)/slider.max;
-    player2.volume = ((vol1.value/vol1.max) * (slider.max - slider.value))/slider.max;
+    player2.volume = ((vol2.value/vol2.max) * slider.value)/slider.max;
+    player1.volume = ((vol1.value/vol1.max) * (slider.max - slider.value))/slider.max;
 }

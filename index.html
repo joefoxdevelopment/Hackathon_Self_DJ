@@ -1,0 +1,52 @@
+<!-- Ability to upload two sound files -->
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="file" class="picker1" onchange="pickAndPlay(1)"><br />
+        <input type="file" class="picker2" onchange="pickAndPlay(2)"><br />
+
+        <audio controls id="player1" class="player1" data>
+            <source class="source1" src="">
+        </audio>
+        <audio controls id="player2" class="player2" data>
+            <source class="source2" src="">
+        </audio><br />
+
+        V1<input id="vol1" type="range" min="0" max="100" value="50" oninput="vol(1)"><br />
+        V2<input id="vol2" type="range" min="0" max="100" value="50" oninput="vol(2)"><br />
+        MIX<input id="mixer" type="range" min="0" max="100" value="50" oninput="fade()"><br />
+    </body>
+    <script>
+        var pickAndPlay = function(source) {
+            var audio     = document.getElementById(".player" + source);
+            var container = document.querySelector(".source" + source);
+            var sound     = document.querySelector(".picker"+source+"[type=file]").files[0];
+            var reader    = new FileReader();
+
+            reader.addEventListener("load", function () {
+                container.src = reader.result;
+            }, false);
+
+            if (sound) {
+                reader.readAsDataURL(sound);
+            }
+        };
+
+        var fade = function() {
+            var player1 = document.getElementById("player1");
+            var player2 = document.getElementById("player2");
+            var slider  = document.getElementById("mixer");
+            var vol     = slider.value / slider.max;
+
+            player1.volume = vol * document.getElementById("vol1").value;
+            player2.volume = (1 - vol) * document.getElementById("vol2").value;
+        };
+
+        var vol = function(source) {
+            var player = document.getElementById("player" + source);
+            var slider = document.getElementById("vol" + source);
+            player.volume = slider.value/slider.max;
+        };
+    </script>
+</html>

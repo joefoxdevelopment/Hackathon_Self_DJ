@@ -13,18 +13,13 @@ var pickAndPlay = function(source) {
     }
 };
 
-var fade = function() {
+var calcVol = function() {
     var player1 = document.getElementById("player1");
     var player2 = document.getElementById("player2");
     var slider  = document.getElementById("mixer");
-    var vol     = slider.value / slider.max;
+    var vol1    = document.getElementById("vol1");
+    var vol2    = document.getElementById("vol2");
 
-    player1.volume = vol * document.getElementById("vol1").value;
-    player2.volume = (1 - vol) * document.getElementById("vol2").value;
-};
-
-var vol = function(source) {
-    var player = document.getElementById("player" + source);
-    var slider = document.getElementById("vol" + source);
-    player.volume = slider.value/slider.max;
-};
+    player1.volume = ((vol1.value/vol1.max) * slider.value)/slider.max;
+    player2.volume = ((vol1.value/vol1.max) * (slider.max - slider.value))/slider.max;
+}

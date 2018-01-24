@@ -1,22 +1,26 @@
 <!-- Ability to upload two sound files -->
 <html>
     <head>
+<<<<<<< HEAD
       <link rel="stylesheet" href="app.css">
+=======
+        <link rel="stylesheet" href="app.css">
+>>>>>>> origin/master
     </head>
     <body>
         <input type="file" id="picker1" class="picker1" onchange="pickAndPlay(1)"><br />
         <input type="file" id="picker1" class="picker2" onchange="pickAndPlay(2)"><br />
 
-        <audio controls id="player1" class="player1" data>
+        <audio crossorigin controls id="player1" class="player1" data>
             <source class="source1" src="">
         </audio>
         <audio controls id="player2" class="player2" data>
             <source class="source2" src="">
         </audio><br />
 
-        V1<input id="vol1" type="range" min="0" max="100" value="50" oninput="vol(1)"><br />
-        V2<input id="vol2" type="range" min="0" max="100" value="50" oninput="vol(2)"><br />
-        MIX<input id="mixer" type="range" min="0" max="100" value="50" oninput="fade()"><br />
+        V1<input id="vol1" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
+        V2<input id="vol2" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
+        MIX<input id="mixer" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
     </body>
-    <script type="text/javascript" src="app.js" />
+    <script type="text/javascript" src="app.js"></script>
 </html>

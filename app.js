@@ -1,16 +1,13 @@
 var pickAndPlay = function(source) {
-    var audio     = document.getElementById(".player" + source);
+    var audio     = document.getElementById("player" + source);
     var container = document.querySelector(".source" + source);
     var sound     = document.querySelector(".picker"+source+"[type=file]").files[0];
     var reader    = new FileReader();
 
-    reader.addEventListener("load", function () {
-        container.src = reader.result;
-    }, false);
+    var file = URL.createObjectURL(sound);
+    container.src = file;
 
-    if (sound) {
-        reader.readAsDataURL(sound);
-    }
+    audio.load();
 };
 
 var calcVol = function() {

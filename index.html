@@ -1,22 +1,31 @@
-<!-- Ability to upload two sound files -->
 <html>
     <head>
+        <title>Self DJ</title>
         <link rel="stylesheet" href="app.css">
     </head>
     <body>
-        <input type="file" id="picker1" class="picker1" onchange="pickAndPlay(1)"><br />
-        <input type="file" id="picker1" class="picker2" onchange="pickAndPlay(2)"><br />
+        <input type="file" class="picker0" onchange="pickAndPlay(0)"><br />
+        <input type="file" class="picker1" onchange="pickAndPlay(1)"><br />
 
-        <audio crossorigin controls id="player1" class="player1" data>
-            <source class="source1" src="">
+        <audio crossorigin controls id="player0" class="player0" volume="0.5">
+            <source class="source0" src="">
         </audio>
-        <audio controls id="player2" class="player2" data>
-            <source class="source2" src="">
+        <audio controls id="player1" class="player1" volume="0.5">
+            <source class="source1" src="">
         </audio><br />
 
-        V1<input id="vol1" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
-        V2<input id="vol2" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
-        MIX<input id="mixer" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
+        V1<input id="vol0" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
+        V2<input id="vol1" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
+        MIX<input id="mixer" type="range" min="0" max="100" value="50" oninput="calcVol()"><br /><br />
+
+        HG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 0);"><br />
+        MG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 0);"><br />
+        LG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 0);"><br /><br />
+
+        HG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 1);"><br />
+        MG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 1);"><br />
+        LG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 1);"><br /><br />
+
     </body>
     <script type="text/javascript" src="app.js"></script>
 </html>

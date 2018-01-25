@@ -15,8 +15,11 @@ var calcVol = function() {
     var vol0    = document.getElementById("vol0");
     var vol1    = document.getElementById("vol1");
 
-    window.selfdj.players[1].volume = ((vol1.value/vol1.max) * slider.value)/slider.max;
-    window.selfdj.players[0].volume = ((vol0.value/vol0.max) * (slider.max - slider.value))/slider.max;
+    var gain1 = window.selfdj.gains[1];
+    var gain0 = window.selfdj.gains[0];
+
+    gain1['volume'].gain.value = ((vol1.value/vol1.max) * slider.value)/slider.max;
+    gain0['volume'].gain.value = ((vol0.value/vol0.max) * (slider.max - slider.value))/slider.max;
 }
 
 var changeEq = function(slider, type, source) {
@@ -97,8 +100,13 @@ window.addEventListener('load', function() {
         hGain.connect(sum);
         sum.connect(window.selfdj.context.destination);
 
+        var volume = window.selfdj.context.createGain();
+        source.connect(volume);
+        volume.connect(window.selfdj.context.destination);
+
         window.selfdj.gains[index]['hGain'] = hGain;
         window.selfdj.gains[index]['mGain'] = mGain;
         window.selfdj.gains[index]['lGain'] = lGain;
+        window.selfdj.gains[index]['volume'] = volume;
     });
 });

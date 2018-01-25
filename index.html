@@ -15,17 +15,20 @@
         </audio><br />
 
         V1<input id="vol0" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
-        V2<input id="vol1" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
-        MIX<input id="mixer" type="range" min="0" max="100" value="50" oninput="calcVol()"><br /><br />
+        V2<input id="vol1" type="range" min="0" max="100" value="50" oninput="calcVol()"><br /><br />
+        
 
-        HG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 0);"><br />
-        MG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 0);"><br />
-        LG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 0);"><br /><br />
-
-        HG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 1);"><br />
-        MG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 1);"><br />
-        LG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 1);"><br /><br />
-
+<div class="containers">
+        HG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 0);" class="slider"><br />
+        MG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 0);" class="slider"><br />
+        LG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 0);" class="slider"><br /><br />
+</div>
+<div class="containers">
+        HG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 1);" class="slider1"><br />
+        MG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 1);" class="slider1"><br />
+        LG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 1);" class="slider1"><br /><br />
+</div>
+        MIX<input id="mixer" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
     </body>
     <script type="text/javascript" src="app.js"></script>
 </html>

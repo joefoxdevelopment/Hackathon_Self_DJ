@@ -7,7 +7,7 @@ body {
 .audiopicker {
   width: auto;
   }
-  .picker1 .picker2 {
+  .picker1 .picker0 {
     -webkit-appearance: none;
     appearance: none;
     height:10px;
@@ -15,4 +15,33 @@ body {
   }
   .slidecontainer {
     width: 50%;
-      }
+    }
+
+.containers {
+  float:left;
+  width:50%;
+
+}
+
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+}

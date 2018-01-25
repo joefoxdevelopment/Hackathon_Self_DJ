@@ -1,12 +1,18 @@
 body {
-background-color: rgb(240, 240, 240);
-font-family:Charlemagne Std;
-font-size:medium;
-text-align: center;
+  background-image: -ms-linear-gradient(bottom, #000000 0%, #C0C0C0	 100%);
+  text-align: center;
+  margin:auto;
+  font-family:Castellar
 }
-.picker1 .picker2 {
-margin-top: 50px;
-margin:bottom: 10px;
-margin-right: 50px;
-margin-left:50px;
-}
+.audiopicker {
+  width: auto;
+  }
+  .picker1 .picker2 {
+    -webkit-appearance: none;
+    appearance: none;
+    height:10px;
+    background: linear-gradient(to right, indigo 10px, violet 90px);
+  }
+  .slidecontainer {
+    width: 50%;
+      }

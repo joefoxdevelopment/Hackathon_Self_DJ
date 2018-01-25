@@ -26,6 +26,13 @@
         MG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 1);"><br />
         LG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 1);"><br /><br />
 
+        <h2>Oscilloscope</h2>
+        <canvas width="650" height="200"></canvas>
+        <script>
+            var sampleplay = new VisualizerSample();
+        </script>
     </body>
     <script type="text/javascript" src="app.js"></script>
+    <script src="shared.js"></script>
+    <script src="visual.js"></script>
 </html>

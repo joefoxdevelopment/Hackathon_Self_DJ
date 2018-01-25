@@ -94,15 +94,17 @@ window.addEventListener('load', function() {
         mBand.connect(mGain);
         lBand.connect(lGain);
 
-        var sum = window.selfdj.context.createGain();
-        lGain.connect(sum);
-        mGain.connect(sum);
-        hGain.connect(sum);
-        sum.connect(window.selfdj.context.destination);
 
         var volume = window.selfdj.context.createGain();
         source.connect(volume);
         volume.connect(window.selfdj.context.destination);
+
+        var sum = window.selfdj.context.createGain();
+        lGain.connect(sum);
+        mGain.connect(sum);
+        hGain.connect(sum);
+        volume.connect(sum);
+        sum.connect(window.selfdj.context.destination);
 
         window.selfdj.gains[index]['hGain'] = hGain;
         window.selfdj.gains[index]['mGain'] = mGain;

@@ -4,30 +4,26 @@
         <link rel="stylesheet" href="app.css">
     </head>
     <body>
+        <div class="containers">
         <input type="file" class="picker0" onchange="pickAndPlay(0)"><br />
+            <audio crossorigin controls id="player0" class="player0" volume="0.5">
+                <source class="source0" src="">
+            </audio><br />
+            V1<input id="vol0" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
+            HG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 0);" class="slider"><br />
+            MG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 0);" class="slider"><br />
+            LG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 0);" class="slider"><br /><br />
+        </div>
+        <div class="containers">
         <input type="file" class="picker1" onchange="pickAndPlay(1)"><br />
-
-        <audio crossorigin controls id="player0" class="player0" volume="0.5">
-            <source class="source0" src="">
-        </audio>
-        <audio controls id="player1" class="player1" volume="0.5">
-            <source class="source1" src="">
-        </audio><br />
-
-        V1<input id="vol0" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
-        V2<input id="vol1" type="range" min="0" max="100" value="50" oninput="calcVol()"><br /><br />
-        
-
-<div class="containers">
-        HG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 0);" class="slider"><br />
-        MG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 0);" class="slider"><br />
-        LG1<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 0);" class="slider"><br /><br />
-</div>
-<div class="containers">
-        HG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 1);" class="slider1"><br />
-        MG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 1);" class="slider1"><br />
-        LG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 1);" class="slider1"><br /><br />
-</div>
+            <audio controls id="player1" class="player1" volume="0.5">
+                <source class="source1" src="">
+            </audio><br />
+            V2<input id="vol1" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
+            HG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 1);" class="slider1"><br />
+            MG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 1);" class="slider1"><br />
+            LG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 1);" class="slider1"><br /><br />
+        </div>
         MIX<input id="mixer" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
     </body>
     <script type="text/javascript" src="app.js"></script>

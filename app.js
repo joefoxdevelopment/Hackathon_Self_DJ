@@ -16,13 +16,22 @@ var calcVol = function() {
     var vol1    = document.getElementById("vol1");
     var vol2    = document.getElementById("vol2");
 
-    window.players[1].volume = ((vol2.value/vol2.max) * slider.value)/slider.max;
-    window.players[0].volume = ((vol1.value/vol1.max) * (slider.max - slider.value))/slider.max;
+    window.selfdj.players[1].volume = ((vol2.value/vol2.max) * slider.value)/slider.max;
+    window.selfdj.players[0].volume = ((vol1.value/vol1.max) * (slider.max - slider.value))/slider.max;
 }
 
 window.addEventListener('load', function() {
-    window.players = [
+    window.selfdj = {};
+
+    window.selfdj.players = [
         document.getElementById("player1"),
         document.getElementById("player2"),
+    ];
+
+    window.selfdj.context  = new webAudioContext();
+
+    window.selfdj.sources = [
+        window.selfdj.context.createMediaElementSource(window.selfdj.players[0]),
+        window.selfdj.context.createMediaElementSource(window.selfdj.players[1]),
     ];
 });

@@ -1,17 +1,27 @@
 body {
-  background: linear-gradient(#ffffff, #eeeeee);
+  background: linear-gradient(-90deg, #000000 , #4C4C4C);
   text-align: center;
   margin: 0px 0px;
   font-family:Arial;
+  color:white:
+
 }
 .audiopicker {
   width: auto;
   }
-  .picker1 .picker0 {
-    -webkit-appearance: none;
-    appearance: none;
-    height:10px;
-    background: linear-gradient(to right, indigo 10px, violet 90px);
+  .picker0 {
+      height:100px;
+    background-image: url("images/Asset 7.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  .picker1 {
+  height:100px;
+    background-image: url("images/Asset 8.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-bottom: 30px;
   }
   .slidecontainer {
     width: 50%;
@@ -22,6 +32,15 @@ body {
   width:50%;
 
 }
+.slider{
+  background-image: url("images/Asset 12.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+
+
 
 
 .slider:hover {

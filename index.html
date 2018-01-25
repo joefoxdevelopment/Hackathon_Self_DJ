@@ -19,10 +19,12 @@
             <audio controls id="player1" class="player1" volume="0.5">
                 <source class="source1" src="">
             </audio><br />
+
             V2<input id="vol1" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
             HG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 1);" class="slider"><br />
             MG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 1);" class="slider"><br />
             LG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 1);" class="slider"><br /><br />
+          
         </div>
         MIXER<br />
         <div class="mixer-container">

@@ -20,11 +20,14 @@
                 <source class="source1" src="">
             </audio><br />
             V2<input id="vol1" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
-            HG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 1);" class="slider1"><br />
-            MG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 1);" class="slider1"><br />
-            LG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 1);" class="slider1"><br /><br />
+            HG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'highGain', 1);" class="slider"><br />
+            MG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 1);" class="slider"><br />
+            LG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 1);" class="slider"><br /><br />
         </div>
-        MIX<input id="mixer" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
+        MIXER<br />
+        <div class="mixer-container">
+            <input id="mixer" class="mixer" type="range" min="0" max="100" value="50" oninput="calcVol()"><br />
+        </div>
     </body>
     <script type="text/javascript" src="app.js"></script>
 </html>

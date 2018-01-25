@@ -21,7 +21,6 @@ var calcVol = function() {
     gain1.volume.gain.value = ((vol1.value/vol1.max) * slider.value)/slider.max;
     gain0.volume.gain.value = ((vol0.value/vol0.max) * (slider.max - slider.value))/slider.max;
 }
-
 var changeEq = function(slider, type, source) {
     var value = slider.value / slider.max;
 
@@ -112,3 +111,4 @@ window.addEventListener('load', function() {
         window.selfdj.gains[index]['volume'] = volume;
     });
 });
+

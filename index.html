@@ -26,6 +26,16 @@
         MG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'midGain', 1);"><br />
         LG2<input type="range" value="100" step="1" min="0" max="100" oninput="changeEq(this, 'lowGain', 1);"><br /><br />
 
+        <h1>Oscillators</h1><br>
+        <p><button onclick="sampleplay.togglePlayback()">Play</button></p>
+        <p>
+<canvas width="640" height="360"></canvas>
+</p>
+<script>
+var sampleplay = new VisualizerSample();
+</script>
+        <p>
     </body>
     <script type="text/javascript" src="app.js"></script>
+    <script src="visual.js"></script>
 </html>

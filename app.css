@@ -1,9 +1,9 @@
 body {
-  background: linear-gradient(-90deg, #000000 , #4C4C4C);
+  background: linear-gradient(180deg, #1c1c1c , #4C4C4C);
   text-align: center;
   margin: 0px 0px;
   font-family:Arial;
-  color:white:
+  color:white;
 
 }
 .audiopicker {
@@ -11,14 +11,14 @@ body {
   }
   .picker0 {
       height:100px;
-    background-image: url("images/Asset 7.png");
+    background-image: url("images/Asset 8.png");
     background-repeat: no-repeat;
     cursor: pointer;
     margin-bottom: 30px;
   }
   .picker1 {
   height:100px;
-    background-image: url("images/Asset 8.png");
+    background-image: url("images/Asset 7.png");
     background-repeat: no-repeat;
     cursor: pointer;
     margin-bottom: 30px;
@@ -30,7 +30,6 @@ body {
 .containers {
   float:left;
   width:50%;
-
 }
 .slider{
   background-image: url("images/Asset 12.png");
@@ -38,7 +37,9 @@ body {
   cursor: pointer;
 }
 
-
+img {
+    width: 100px;
+}
 
 
 
